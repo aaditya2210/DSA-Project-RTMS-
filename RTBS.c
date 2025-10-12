@@ -96,29 +96,113 @@ Train* searchTrain(int train_no)
 
 
 // Preload some trains
-void initializeTrains() {
-    Train *t1 = (Train*)malloc(sizeof(Train));
-    t1->train_no = 20960;
-    strcpy(t1->train_name, "Rajdhani Express");
-    strcpy(t1->source, "Mumbai");
-    strcpy(t1->destination, "Ahmedabad");
-    t1->total_seats = 5;
-    t1->available_seats = 2;
-    t1->next = NULL;
-    head = t1;
-
-    Train *t2 = (Train*)malloc(sizeof(Train));
-    t2->train_no = 12934;
-    strcpy(t2->train_name, "Karnavati Express");
-    strcpy(t2->source, "Ahmedabad");
-    strcpy(t2->destination, "Mumbai");
-    t2->total_seats = 720;
-    t2->available_seats = 120;
-    t2->next = NULL;
-    t1->next = t2;
-}
-
+    void initializeTrains() {
+        Train *t1 = (Train*)malloc(sizeof(Train));
+        t1->train_no = 20960;
+        strcpy(t1->train_name, "Rajdhani Express");
+        strcpy(t1->source, "Mumbai");
+        strcpy(t1->destination, "Ahmedabad");
+        t1->total_seats = 700;
+        t1->available_seats = 120;
+        t1->next = NULL;
+        head = t1;
+    
+        Train *t2 = (Train*)malloc(sizeof(Train));
+        t2->train_no = 12934;
+        strcpy(t2->train_name, "Karnavati Express");
+        strcpy(t2->source, "Ahmedabad");
+        strcpy(t2->destination, "Mumbai");
+        t2->total_seats = 720;
+        t2->available_seats = 150;
+        t2->next = NULL;
+        t1->next = t2;
+    
+        Train *t3 = (Train*)malloc(sizeof(Train));
+        t3->train_no = 12267;
+        strcpy(t3->train_name, "Nanda Devi Express");
+        strcpy(t3->source, "Dehradun");
+        strcpy(t3->destination, "New Delhi");
+        t3->total_seats = 680;
+        t3->available_seats = 85;
+        t3->next = NULL;
+        t2->next = t3;
+    
+        Train *t4 = (Train*)malloc(sizeof(Train));
+        t4->train_no = 12627;
+        strcpy(t4->train_name, "Karnataka Express");
+        strcpy(t4->source, "Bengaluru");
+        strcpy(t4->destination, "New Delhi");
+        t4->total_seats = 900;
+        t4->available_seats = 230;
+        t4->next = NULL;
+        t3->next = t4;
+    
+        Train *t5 = (Train*)malloc(sizeof(Train));
+        t5->train_no = 12009;
+        strcpy(t5->train_name, "Shatabdi Express");
+        strcpy(t5->source, "Mumbai");
+        strcpy(t5->destination, "Ahmedabad");
+        t5->total_seats = 800;
+        t5->available_seats = 190;
+        t5->next = NULL;
+        t4->next = t5;
+    
+        Train *t6 = (Train*)malloc(sizeof(Train));
+        t6->train_no = 12864;
+        strcpy(t6->train_name, "Yesvantpur Express");
+        strcpy(t6->source, "Howrah");
+        strcpy(t6->destination, "Yesvantpur");
+        t6->total_seats = 1000;
+        t6->available_seats = 400;
+        t6->next = NULL;
+        t5->next = t6;
+    
+        Train *t7 = (Train*)malloc(sizeof(Train));
+        t7->train_no = 12246;
+        strcpy(t7->train_name, "Duronto Express");
+        strcpy(t7->source, "Howrah");
+        strcpy(t7->destination, "Yesvantpur");
+        t7->total_seats = 950;
+        t7->available_seats = 320;
+        t7->next = NULL;
+        t6->next = t7;
+    
+        Train *t8 = (Train*)malloc(sizeof(Train));
+        t8->train_no = 12616;
+        strcpy(t8->train_name, "Grand Trunk Express");
+        strcpy(t8->source, "Chennai");
+        strcpy(t8->destination, "New Delhi");
+        t8->total_seats = 980;
+        t8->available_seats = 275;
+        t8->next = NULL;
+        t7->next = t8;
+    
+        Train *t9 = (Train*)malloc(sizeof(Train));
+        t9->train_no = 12301;
+        strcpy(t9->train_name, "Rajdhani Express");
+        strcpy(t9->source, "Howrah");
+        strcpy(t9->destination, "New Delhi");
+        t9->total_seats = 850;
+        t9->available_seats = 220;
+        t9->next = NULL;
+        t8->next = t9;
+    
+        Train *t10 = (Train*)malloc(sizeof(Train));
+        t10->train_no = 12622;
+        strcpy(t10->train_name, "Tamil Nadu Express");
+        strcpy(t10->source, "New Delhi");
+        strcpy(t10->destination, "Chennai");
+        t10->total_seats = 1000;
+        t10->available_seats = 410;
+        t10->next = NULL;
+        t9->next = t10;
+    
+        printf("\n✅ 10 Trains initialized successfully!\n");
+    }
+    
 // Train structure end 
+
+
 
 // Passenger structure start
 typedef struct Passenger{
