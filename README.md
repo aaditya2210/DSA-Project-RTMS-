@@ -98,10 +98,18 @@ Upon running the program, you'll see a menu with the following options:
 
 ### Sample Pre-loaded Trains
 
-| Train No | Train Name         | Source    | Destination | Total Seats | Available |
-|----------|-------------------|-----------|-------------|-------------|-----------|
-| 20960    | Rajdhani Express  | Mumbai    | Ahmedabad   | 5           | 2         |
-| 12934    | Karnavati Express | Ahmedabad | Mumbai      | 720         | 120       |
+| Train No | Train Name           | Source     | Destination | Total Seats | Available |
+|----------|---------------------|------------|-------------|-------------|-----------|
+| 20960    | Rajdhani Express    | Mumbai     | Ahmedabad   | 700         | 120       |
+| 12934    | Karnavati Express   | Ahmedabad  | Mumbai      | 720         | 150       |
+| 12267    | Nanda Devi Express  | Dehradun   | New Delhi   | 680         | 85        |
+| 12627    | Karnataka Express   | Bengaluru  | New Delhi   | 900         | 230       |
+| 12009    | Shatabdi Express    | Mumbai     | Ahmedabad   | 800         | 190       |
+| 12864    | Yesvantpur Express  | Howrah     | Yesvantpur  | 1000        | 400       |
+| 12246    | Duronto Express     | Howrah     | Yesvantpur  | 950         | 320       |
+| 12616    | Grand Trunk Express | Chennai    | New Delhi   | 980         | 275       |
+| 12301    | Rajdhani Express    | Howrah     | New Delhi   | 850         | 220       |
+| 12622    | Tamil Nadu Express  | New Delhi  | Chennai     | 1000        | 410       |
 
 ## 🔧 Functionality Details
 
