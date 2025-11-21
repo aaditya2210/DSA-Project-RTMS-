@@ -109,7 +109,7 @@ void initializeTrains()
     strcpy(t2->source, "Ahmedabad");
     strcpy(t2->destination, "Mumbai");
     t2->total_seats = 720;
-    t2->available_seats = 150;
+    t2->available_seats = 1;
     t2->next = NULL;
     t1->next = t2;
 
@@ -193,7 +193,7 @@ void initializeTrains()
     t10->next = NULL;
     t9->next = t10;
 
-    printf("\n✅ 10 Trains initialized successfully!\n");
+    printf("\n10 Trains initialized successfully!\n");
 }
 
 // Train structure end
@@ -266,7 +266,7 @@ void bookTicket()
     Train *train = searchTrain(train_no);
     if (train == NULL)
     {
-        printf("❌ Train not found!\n");
+        printf("Train not found!\n");
         return;
     }
 
@@ -292,12 +292,12 @@ void bookTicket()
                 temp = temp->next;
             temp->next = newPassenger;
         }
-        printf("\n✅ Ticket booked successfully! Passenger ID: %d\n", newPassenger->id);
+        printf("\nTicket booked successfully! Passenger ID: %d\n", newPassenger->id);
     }
     else
     {
         enqueue(*newPassenger);
-        printf("\n⚠️ No seats available! Added to waiting list.\n");
+        printf("\nNo seats available! Added to waiting list.\n");
         free(newPassenger);
     }
 }
@@ -318,7 +318,7 @@ void cancelTicket()
 
     if (temp == NULL)
     {
-        printf("❌ Passenger not found!\n");
+        printf("Passenger not found!\n");
         return;
     }
 
@@ -332,7 +332,7 @@ void cancelTicket()
         prev->next = temp->next;
 
     free(temp);
-    printf("✅ Ticket cancelled successfully!\n");
+    printf("Ticket cancelled successfully!\n");
 
     // Move waiting passenger (if any) to confirmed list
     if (!isQueueEmpty() && train != NULL)
@@ -352,7 +352,7 @@ void cancelTicket()
                 t = t->next;
             t->next = newP;
         }
-        printf("🎟️ Waiting passenger %s moved to confirmed list!\n", nextPass.name);
+        printf("Waiting passenger %s moved to confirmed list!\n", nextPass.name);
     }
 }
 
@@ -382,7 +382,7 @@ void printTicket()
 {
     if (bookedList == NULL)
     {
-        printf("\n❌ No confirmed bookings available!\n");
+        printf("\nNo confirmed bookings available!\n");
         return;
     }
 
@@ -396,14 +396,14 @@ void printTicket()
 
     if (p == NULL)
     {
-        printf("\n❌ Passenger not found or not confirmed!\n");
+        printf("\nPassenger not found or not confirmed!\n");
         return;
     }
 
     Train *t = searchTrain(p->train_no);
     if (t == NULL)
     {
-        printf("\n⚠️ Train details not found!\n");
+        printf("\nTrain details not found!\n");
         return;
     }
 
@@ -419,9 +419,6 @@ void printTicket()
     printf(" Destination      : %s\n", t->destination);
     printf(" Seat Status      : CONFIRMED\n");
     printf("------------------------------------------------\n");
-    printf("  🕒 Please arrive 30 mins before departure.\n");
-    printf("  ✅ Have a safe and comfortable journey!\n");
-    printf("================================================\n");
 }
 
 // Passenger structure end
@@ -567,10 +564,10 @@ int main()
             printTicket();
             break;
         case 10:
-            printf("\n🚉 Exiting System...\n");
+            printf("\nExiting System...\n");
             exit(0);
         default:
-            printf("❌ Invalid choice!\n");
+            printf("Invalid choice!\n");
         }
 
     }
